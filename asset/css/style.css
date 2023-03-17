@@ -1,0 +1,23 @@
+.logo{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+main {
+    background-color: aquamarine;
+}
+.square{
+    width: calc(100% / 10);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+.select_level{
+    width: 200px;
+}
+.bg-lighitgrey{
+    background-color: rgb(247, 245, 245);
+}

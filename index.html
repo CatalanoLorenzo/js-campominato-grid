@@ -10,13 +10,40 @@
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <button id="play_button">Play</button>
-    <div class="container">
-        <div class="row col-10" id="row_grill">
+    <header>
+        .<!-- Nav bar-->
+        <ul class="nav justify-content-between align-items-center" id="navId" role="tablist">
+         <li class="navbar-brand d-flex align-items-center">
+            <div class="logo">
+                <img src="./asset/img/mobile-logo.png" alt="" srcset="">
+            </div>
+            <h1 class="fw-bolder">Campo Minato</h1>
+         </li>
+         <li class="nav-item d-flex align-items-baseline" >
+            <p class="px-2">Difficoltà:</p>
+            <select name="selector" id="level" class="select_level rounded-2 bg-lighitgrey">
+                 <option value="hard">Hard</option>
+                 <option value="normal">Normal</option>
+                 <option value="easy">Easy</option>
+            </select>
+             <button id="play_button"  class="mx-2 px-4 rounded-2 bg-lighitgrey ">Play</button>
+         </li>
+        </ul>
 
+    </header>
+   
+   
+<main>
+    <div class="container">
+        <div class="row row-cols-6 p-5" id="row_grill">
+            <!-- ---------create cell by JS------------------ -->
         </div>
     </div>
-
+    <div class="col"></div>
+</main>
+<footer>
+    <p class="p-3">Made with &hearts; by <a href="#">Boolean</a></p>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="./asset/js/main.js"></script>
 </body>

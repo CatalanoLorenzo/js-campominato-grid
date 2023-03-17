@@ -18,7 +18,7 @@ play_button.addEventListener ('click', function(){
         const number_into_cell =document.createElement('p')
         number_into_cell.innerHTML = `${i}`
         cell_el.insertAdjacentElement ('beforeend',number_into_cell)
-        cell_el.classList.add('col')
+        cell_el.classList.add('col','square')
         row_grill.insertAdjacentElement ('beforeend',cell_el)
         i++
     }
