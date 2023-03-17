@@ -7,14 +7,26 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 const play_button = document.getElementById ('play_button')
 const row_grill = document.getElementById ('row_grill')
 let number_of_cells = 100
-
 //all'evento del click si generano 100 celle 
 //all'interno della riga con all'interno un paragrafo col numero corispettivo e anche una clesse
 
 play_button.addEventListener ('click', function(){
-    
-    for (let i = 0; i < number_of_cells + 1; i++) {
-        const cell_el = (`<di class='col ${i}'><p>${i}</p></di>`)
-        row_grill.innerHTML += cell_el
+    let i = 1
+    while (i < number_of_cells + 1) {
+        
+        const cell_el = document.createElement("div");
+        const number_into_cell =document.createElement('p')
+        number_into_cell.innerHTML = `${i}`
+        cell_el.insertAdjacentElement ('beforeend',number_into_cell)
+        cell_el.classList.add('col')
+        row_grill.insertAdjacentElement ('beforeend',cell_el)
+        i++
     }
-})
+    const cell = document.querySelectorAll ('.col')
+    for (let i = 0; i < cell.length - 1; i++) {
+        cell[i].addEventListener ('click',function(){
+            console.log(Number(cell[i].innerText))
+        })
+        
+    }
+}) 
