@@ -13,14 +13,8 @@ let number_of_cells = 100
 
 play_button.addEventListener ('click', function(){
     
-    for (let i = 0; i < number_of_cells; i++) {
-        const cell_el = (`<di class='cell ${i}'><p>${i}</p></di>`)
+    for (let i = 0; i < number_of_cells + 1; i++) {
+        const cell_el = (`<di class='col ${i}'><p>${i}</p></di>`)
         row_grill.innerHTML += cell_el
-        
     }
-
-
-
-
-
 })
