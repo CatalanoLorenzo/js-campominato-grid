@@ -10,10 +10,21 @@
 main {
     background-color: aquamarine;
 }
+.select{
+    background-color: azure;
+}
 .square{
     width: calc(100% / 10);
     aspect-ratio: 1/1;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.square p{
+    margin-bottom: 0rem;
+    margin-top: 0rem;
 }
 .select_level{
     width: 200px;
