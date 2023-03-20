@@ -16,6 +16,7 @@ console.log(click);
 
 play_button.addEventListener('click', function () {
     if (click) {
+        row_grill.innerHTML = ''
         let difficulty = select_level.value
         console.log(difficulty)
         if (difficulty == 'hard') {
