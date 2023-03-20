@@ -10,14 +10,17 @@ const select_level = document.getElementById('level')
 const stylepage = document.styleSheets[5]
 let number_of_cells
 let click = true
+let difficulty = select_level.value
+
 console.log(click);
 //all'evento del click si generano 100 celle 
 //all'interno della riga con all'interno un paragrafo col numero corispettivo e anche una clesse
 
 play_button.addEventListener('click', function () {
+    //----------cicle of game---------------
     if (click) {
         row_grill.innerHTML = ''
-        let difficulty = select_level.value
+        //----------------- selctor level--------------------
         console.log(difficulty)
         if (difficulty == 'hard') {
             number_of_cells = 49
@@ -28,6 +31,7 @@ play_button.addEventListener('click', function () {
             number_of_cells = 100
         }
         console.log(number_of_cells)
+        //--------------------generetor of cell------------------
         let i = 1
         while (i < number_of_cells + 1) {
 
@@ -40,6 +44,7 @@ play_button.addEventListener('click', function () {
             row_grill.insertAdjacentElement('beforeend', cell_el)
             i++
         }
+        //-------------------selector of cells----------------------
         const cell = document.querySelectorAll('.col')
         for (let i = 0; i < cell.length - 1; i++) {
             cell[i].addEventListener('click', function () {
