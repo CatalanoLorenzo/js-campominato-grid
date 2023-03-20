@@ -7,6 +7,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 const play_button = document.getElementById('play_button')
 const row_grill = document.getElementById('row_grill')
 const select_level = document.getElementById('level')
+const stylepage = document.styleSheets[5]
 let number_of_cells
 let click = true
 console.log(click);
@@ -19,6 +20,7 @@ play_button.addEventListener('click', function () {
         console.log(difficulty)
         if (difficulty == 'hard') {
             number_of_cells = 49
+            
         } else if (difficulty == 'normal') {
             number_of_cells = 81
         } else {
@@ -33,6 +35,7 @@ play_button.addEventListener('click', function () {
             number_into_cell.innerHTML = `${i}`
             cell_el.insertAdjacentElement('beforeend', number_into_cell)
             cell_el.classList.add('col', 'square')
+            cell_el.style.width = `calc(100% / ${Math.sqrt(number_of_cells)})`
             row_grill.insertAdjacentElement('beforeend', cell_el)
             i++
         }
